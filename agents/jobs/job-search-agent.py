@@ -123,6 +123,8 @@ class JobHuntingAgent:
                     ''' ,
                 schema=ExtractSchema.model_json_schema()
             )
+
+            
             
             print("Raw Job Response:", raw_response)
             
