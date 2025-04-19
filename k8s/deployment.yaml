@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: job-search-agent
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: job-search-agent
+  template:
+    metadata:
+      labels:
+        app: job-search-agent
+    spec:
+      containers:
+      - name: job-search-agent
+        image: job-search-agent:latest
+        ports:
+        - containerPort: 8501
+        env:
+        - name: FIRECRAWL_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: job-search-agent-secrets
+              key: firecrawl_api_key
+        - name: OPENAI_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: job-search-agent-secrets
+              key: openai_api_key
+        - name: OPENAI_MODEL_ID
+          value: "o3-mini"

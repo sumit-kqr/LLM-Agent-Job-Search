@@ -1,0 +1,13 @@
+prefix=C:/Users/sumit/OneDrive/Desktop/LLMApp/Job_Search_Agent/LLM-Agent-Job-Search/jobagent/Library
+exec_prefix=C:/Users/sumit/OneDrive/Desktop/LLMApp/Job_Search_Agent/LLM-Agent-Job-Search/jobagent/Library
+libdir=C:/Users/sumit/OneDrive/Desktop/LLMApp/Job_Search_Agent/LLM-Agent-Job-Search/jobagent/Library/lib
+sharedlibdir=C:/Users/sumit/OneDrive/Desktop/LLMApp/Job_Search_Agent/LLM-Agent-Job-Search/jobagent/Library/lib
+includedir=C:/Users/sumit/OneDrive/Desktop/LLMApp/Job_Search_Agent/LLM-Agent-Job-Search/jobagent/Library/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.2.13
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}
